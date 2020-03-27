@@ -1,0 +1,106 @@
+<UI>
+    <Frame name="RH_MainFrame" parent="UIParent" 
+        enableMouse="true"
+        movable="true" clampedToScreen="true">
+        <Size>
+            <AbsDimension x="200" y="100" />
+        </Size>
+        <Anchors>
+            <Anchor point="CENTER" />
+        </Anchors>
+        <Backdrop bgFile="Interface\TOoltips\UI-Tooltip-Background"
+            tile="true">
+            <TileSize>
+                <AbsValue val="16" />
+            </TileSize>                      
+            <Color r="0.2" g="0.2" b="0.2" a="0.7" />
+        </Backdrop>
+        <Scripts>
+            <OnLoad>
+                raidhealth.onLoad()
+            </OnLoad>
+            <OnMouseDown>
+            RH_MainFrame_OnMouseDown()
+            </OnMouseDown>
+            <OnMouseUp>
+            RH_MainFrame_OnMouseUp()
+            </OnMouseUp>
+        </Scripts>
+        <Frames>
+            
+            <Button name="$parent_Button">
+                <Size>
+                    <AbsDimension x="15" y="15" />
+                </Size>
+                <Anchors>
+                    <Anchor point="TOPLEFT">
+                        <Offset>
+                            <AbsDimension x="3" y="-3" />
+                        </Offset>
+                    </Anchor>
+                </Anchors>
+                <NormalTexture file="Interface\Minimap\TRACKING\OBJECTICONS">
+                    <TexCoords left="0" right=".125" top="0" bottom=".5" />
+                </NormalTexture>
+            </Button>
+            <StatusBar enableMouse="true" name="RH_HealthBar">                
+                <Anchors>
+                    <Anchor point="TOPLEFT">
+                        <Offset>
+                            <AbsDimension x="0" y="-20" />
+                        </Offset>
+                    </Anchor>
+                </Anchors>                
+                <Size x="200" y="20" />                           
+                <BarTexture file="Interface\Buttons\UI-Listbox-Highlight2"/>
+                <BarColor r="0" g="1.0" b="0"/>               
+            </StatusBar>
+            <StatusBar enableMouse="true" name="RH_HealerManaBar">                
+                <Anchors>
+                    <Anchor point="TOPLEFT">
+                        <Offset>
+                            <AbsDimension x="0" y="-40" />
+                        </Offset>
+                    </Anchor>
+                </Anchors>    
+                <Scripts>
+                    <OnEnter>
+                        RH_ShowPopup(self)
+                    </OnEnter>
+                    <OnLeave>
+                        RH_HidePopup()
+                    </OnLeave>
+                </Scripts>
+                <Size x="200" y="20" />                           
+                <BarTexture file="Interface\Buttons\UI-Listbox-Highlight2"/>
+                <BarColor r="0" g="0" b="1"/>               
+            </StatusBar>
+            <StatusBar enableMouse="true" name="RH_ManaBar">                
+                <Anchors>
+                    <Anchor point="TOPLEFT">
+                        <Offset>
+                            <AbsDimension x="0" y="-60" />
+                        </Offset>
+                    </Anchor>
+                </Anchors> 
+                <Size x="200" y="20" />                           
+                <BarTexture file="Interface\Buttons\UI-Listbox-Highlight2"/>
+                <BarColor r="0" g="1.0" b="1.0"/>               
+            </StatusBar>
+            <StatusBar enableMouse="true" name="RH_BuffBar">                
+                <Anchors>
+                    <Anchor point="TOPLEFT">
+                        <Offset>
+                            <AbsDimension x="0" y="-80" />
+                        </Offset>
+                    </Anchor>
+                </Anchors>                 
+                <Size x="200" y="20" />                           
+                <BarTexture file="Interface\Buttons\UI-Listbox-Highlight2"/>
+                <BarColor r="1.0" g=".4117" b=".7058"/>               
+            </StatusBar>
+        </Frames>     
+    
+    </Frame>
+    
+</UI>

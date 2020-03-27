@@ -1,0 +1,10 @@
+## Interface: 11303
+## Title: Raid Health
+## Notes: Shows high level metrics for overall raid health
+## Author: Lolikaust and Gnomërcy - Whitemane
+## Version: 1.0
+## SavedVariables: RaidHealth_GlobalSettings, RaidHealth_BlockList
+## SavedVariablesPerCharacter: RaidHealth_SavedPresets
+
+raidhealth.lua
+baseui.xml
