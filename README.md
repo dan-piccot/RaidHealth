@@ -16,3 +16,6 @@ A small plugin to view the overall health of the raid, including:
 - /rh blacklist
   - View the list of blocked players
 
+## Installation Instructions
+- Download Zip
+- Extract to Addon folder and rename from "RaidHealth-master" to "RaidHealth"
